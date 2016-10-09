@@ -6,7 +6,14 @@
 //  font-weight: bold;
 //  font-style: normal;
 //}
+@font-face {
+  font-family: 'molot';
+  src: url('../fonts/molot/8232-webfont.woff2') format('woff2'),
+  url('../fonts/molot/8232-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 
+}
 //@mixin cuprum_bold ($size, $color) {
 //  font-family: "cuprum bold";
 //  font-size: $size;
@@ -36,3 +43,62 @@
 //	height: 100%;
 //	width: 100%;
 //}
+
+.logo_text {
+    font-family: "molot";
+    //text-align: center;
+    height: 50px;
+    position: relative;
+
+  &:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-image: url("../img/molot_logo_md.png");
+    //left: -60px;
+    bottom: -2px;
+  }
+
+  .logo_text_sx {
+    font-size: 14px;
+    line-height: 18px;
+    padding-left: 65px;
+  }
+
+  .logo_text_md {
+    font-size: 38px;
+    line-height: 30px;
+    padding-left: 65px;
+  }
+}
+.col-md-2.menu {
+  position: relative;
+}
+.navbar-static-top a {
+  //display: inline-block;
+  position: relative;
+  top: 15px;
+  line-height: 50px;
+  //vertical-align: baseline;
+}
+.navbar-static-top {
+  //height: 30px;
+  padding: 10px 0 10px 0;
+  //margin: 0;
+}
+.menu {
+  text-align: right;
+  height: 50px;
+}
+.menu_href a {
+  //vertical-align: bottom;
+}
+.navbar {
+  margin-bottom: 0;
+  //margin-bottom: 0!important;
+}
+.navbar-default {
+  background-color: #004444;
+}

@@ -1,0 +1,57 @@
+@font-face {
+  font-family: 'molot';
+  src: url("../fonts/molot/8232-webfont.woff2") format("woff2"), url("../fonts/molot/8232-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.logo_text {
+  font-family: "molot";
+  height: 50px;
+  position: relative;
+}
+.logo_text:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-image: url("../img/molot_logo_md.png");
+  bottom: -2px;
+}
+.logo_text .logo_text_sx {
+  font-size: 14px;
+  line-height: 18px;
+  padding-left: 65px;
+}
+.logo_text .logo_text_md {
+  font-size: 38px;
+  line-height: 30px;
+  padding-left: 65px;
+}
+
+.col-md-2.menu {
+  position: relative;
+}
+
+.navbar-static-top a {
+  position: relative;
+  top: 15px;
+  line-height: 50px;
+}
+
+.navbar-static-top {
+  padding: 10px 0 10px 0;
+}
+
+.menu {
+  text-align: right;
+  height: 50px;
+}
+
+.navbar {
+  margin-bottom: 0;
+}
+
+.navbar-default {
+  background-color: #004444;
+}
