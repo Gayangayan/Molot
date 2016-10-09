@@ -1,0 +1,18 @@
+{
+  "name": "my_template",
+  "version": "1.0.0",
+  "description": "homework 2",
+  "main": "gulpfile.js",
+  "repository": "https://github.com/RSadyrga/blog---main",
+  "scripts": {},
+  "author": "Roman Sadyrga",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.9.11",
+    "gulp": "^3.9.1",
+    "gulp-compass": "^2.1.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-plumber": "^1.1.0",
+    "sass": "^0.5.0"
+  }
+}
