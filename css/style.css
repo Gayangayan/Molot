@@ -1,22 +1,74 @@
+@import url(../css/font-awesome.css);
 @font-face {
   font-family: 'molot';
   src: url("../fonts/molot/8232-webfont.woff2") format("woff2"), url("../fonts/molot/8232-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'PT Sans Regular';
+  src: url("../fonts/ptsans/pts55f-webfont.eot");
+  src: url("../fonts/ptsans/pts55f-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/ptsans/pts55f-webfont.woff2") format("woff2"), url("../fonts/ptsans/pts55f-webfont.woff") format("woff"), url("../fonts/ptsans/pts55f-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PT Sans Bold';
+  src: url("../fonts/ptsans/pts75f-webfont.eot");
+  src: url("../fonts/ptsans/pts75f-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/ptsans/pts75f-webfont.woff2") format("woff2"), url("../fonts/ptsans/pts75f-webfont.woff") format("woff"), url("../fonts/ptsans/pts75f-webfont.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PT Sans Narrow';
+  src: url("../fonts/ptsans/ptn57f-webfont.eot");
+  src: url("../fonts/ptsans/ptn57f-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/ptsans/ptn57f-webfont.woff2") format("woff2"), url("../fonts/ptsans/ptn57f-webfont.woff") format("woff"), url("../fonts/ptsans/ptn57f-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+html, body {
+  height: 100%;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body {
+  overflow: hidden;
+  height: auto;
+  min-height: 100%;
+}
+
+.page {
+  margin: 0 auto 700px;
+  /*padding: 0 0 60px;*/
+}
+
+.footer {
+  height: 700px;
+  width: 100%;
+  position: absolute;
+  bottom: 10px;
+}
+
+.footer_container {
+  padding-top: 40px;
+  text-align: center;
+}
+
+.wish_molot {
+  font-size: 48px;
+}
+
+.page, .footer {
+  background-color: #fff573;
+  font-family: "PT Sans Regular";
+}
+
 .logo_text {
   font-family: "molot";
-  height: 50px;
+  font-size: 30px;
+  color: #333;
   position: relative;
-}
-.logo_text:before {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  background-image: url("../img/molot_logo_md.png");
-  bottom: -2px;
 }
 .logo_text .logo_text_sx {
   font-size: 14px;
@@ -34,24 +86,132 @@
 }
 
 .navbar-static-top a {
-  position: relative;
-  top: 15px;
-  line-height: 50px;
-}
-
-.navbar-static-top {
-  padding: 10px 0 10px 0;
+  color: #333;
 }
 
 .menu {
   text-align: right;
   height: 50px;
+  font-size: 18px;
 }
 
 .navbar {
-  margin-bottom: 0;
+  margin-bottom: 0 !important;
 }
 
 .navbar-default {
-  background-color: #004444;
+  background-color: #fff573 !important;
+}
+
+.main_pic_container {
+  height: 400px;
+  background-image: url("../img/0_8ebbc1.jpg");
+  background-position: left;
+  margin-bottom: 40px;
+}
+
+.next_game {
+  font-family: "PT Sans Regular";
+  color: white;
+  padding-right: 20%;
+  padding-top: 10%;
+}
+.next_game .main_title {
+  font-family: "PT Sans Bold";
+  font-size: 48px;
+  line-height: 60px;
+}
+.next_game .main_title_xs {
+  font-family: "PT Sans Bold";
+  font-size: 36px;
+  line-height: 40px;
+}
+.next_game .main_text {
+  line-height: 20px;
+  margin-bottom: 5px;
+}
+.next_game .date_text {
+  font-family: "PT Sans Narrow";
+  font-size: 44px;
+  line-height: 46px;
+}
+.next_game .date_text_sm {
+  font-family: "PT Sans Narrow";
+  font-size: 42px;
+  line-height: 48px;
+}
+.next_game .date_text_xs {
+  font-family: "PT Sans Narrow";
+  font-size: 30px;
+  line-height: 30px;
+}
+
+@media screen and (max-width: 767px) {
+  .next_game {
+    padding-right: 0;
+  }
+}
+p {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.cite_molot {
+  font-size: 30px;
+}
+.cite_molot:before {
+  display: block;
+  content: "";
+  width: 30%;
+  height: 1px;
+  background-color: #333;
+  margin: 24px auto 15px auto;
+}
+.cite_molot:after {
+  display: block;
+  content: "";
+  width: 30%;
+  height: 1px;
+  background-color: #333;
+  margin: 15px auto 24px auto;
+}
+
+.social_icons {
+  padding: 0;
+  margin: 40px 0 0 0;
+  list-style-type: none;
+}
+
+.social_icons_li {
+  display: inline-block;
+  margin-left: 20px;
+}
+.social_icons_li:first-child {
+  margin-left: 0;
+}
+
+.social_icons_href {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  color: #d14647;
+}
+
+.nav.navbar-nav.navbar-right a {
+  color: #333;
+  cursor: pointer;
+}
+
+.nav.navbar-nav.navbar-right a:hover {
+  font-weight: bold;
+}
+
+.nav.navbar-nav.navbar-right li:hover:before {
+  position: absolute;
+  bottom: -1px;
+  display: block;
+  content: "";
+  height: 5px;
+  width: 100%;
+  background-color: #333;
 }

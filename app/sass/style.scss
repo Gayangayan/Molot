@@ -1,11 +1,4 @@
-//@import url(../css/example.css);
-//@font-face {
-//  font-family: 'cuprum bold';
-//  src: url('../fonts/cuprum/cuprum-bold-webfont.woff2') format('woff2'),
-//  url('../fonts/cuprum/cuprum-bold-webfont.woff') format('woff');
-//  font-weight: bold;
-//  font-style: normal;
-//}
+@import url(../css/font-awesome.css);
 @font-face {
   font-family: 'molot';
   src: url('../fonts/molot/8232-webfont.woff2') format('woff2'),
@@ -14,12 +7,33 @@
   font-style: normal;
 
 }
-//@mixin cuprum_bold ($size, $color) {
-//  font-family: "cuprum bold";
-//  font-size: $size;
-//  color: $color;
-//}
-
+@font-face {
+  font-family: 'PT Sans Regular';
+  src: url("../fonts/ptsans/pts55f-webfont.eot");
+  src: url("../fonts/ptsans/pts55f-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/ptsans/pts55f-webfont.woff2") format("woff2"), url("../fonts/ptsans/pts55f-webfont.woff") format("woff"), url("../fonts/ptsans/pts55f-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PT Sans Bold';
+  src: url('../fonts/ptsans/pts75f-webfont.eot');
+  src: url('../fonts/ptsans/pts75f-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/ptsans/pts75f-webfont.woff2') format('woff2'),
+  url('../fonts/ptsans/pts75f-webfont.woff') format('woff'),
+  url('../fonts/ptsans/pts75f-webfont.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PT Sans Narrow';
+  src: url('../fonts/ptsans/ptn57f-webfont.eot');
+  src: url('../fonts/ptsans/ptn57f-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/ptsans/ptn57f-webfont.woff2') format('woff2'),
+  url('../fonts/ptsans/ptn57f-webfont.woff') format('woff'),
+  url('../fonts/ptsans/ptn57f-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 //$black: #323232;
 
 
@@ -43,22 +57,70 @@
 //	height: 100%;
 //	width: 100%;
 //}
+@mixin pt_sans_regular ($size, $color) {
+  font-family: "PT Sans Regular";
+  font-size: $size;
+  color: $color;
+}
+@mixin ptsans_bold ($size, $color) {
+  font-family: "PT Sans Bold";
+  font-size: $size;
+  color: $color;
+}
+//----------------Приколачивание футера к низу----------------//
+html, body {
+  height:100%;
+  position:relative;
+  overflow-x:hidden;
+}
+body {
+  overflow:hidden;
+  height:auto;
+  min-height:100%;
+}
+.page {
+  margin:0 auto 700px;
+  /*padding: 0 0 60px;*/
+}
 
+//-----------------------Футер------------------------------//
+.footer {
+  height:700px;
+  width:100%;
+  position:absolute;
+  bottom: 10px;
+}
+.footer_container {
+  padding-top: 40px; // не относится к приколачиванию}
+  text-align: center;
+}
+.wish_molot {
+  font-size: 48px;
+}
+//-----------------------------------------------------//
+
+
+.page, .footer {
+  background-color: #fff573;
+  font-family: "PT Sans Regular";
+}
 .logo_text {
     font-family: "molot";
+    font-size: 30px;
+    color: #333;
     //text-align: center;
-    height: 50px;
+    //height: 50px;
     position: relative;
 
   &:before {
-    content: "";
-    display: inline-block;
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    background-image: url("../img/molot_logo_md.png");
+    //content: "";
+    //display: inline-block;
+    //position: absolute;
+    //width: 50px;
+    //height: 50px;
+    //background-image: url("../img/molot_logo_md.png");
     //left: -60px;
-    bottom: -2px;
+    //bottom: -2px;
   }
 
   .logo_text_sx {
@@ -77,28 +139,153 @@
   position: relative;
 }
 .navbar-static-top a {
-  //display: inline-block;
-  position: relative;
-  top: 15px;
-  line-height: 50px;
+  color: #333;
+  //color: #333;
+  //position: relative;
+  //top: 15px;
+  //line-height: 18px;
   //vertical-align: baseline;
 }
 .navbar-static-top {
   //height: 30px;
-  padding: 10px 0 10px 0;
+  //padding: 10px 0 10px 0;
   //margin: 0;
 }
 .menu {
   text-align: right;
   height: 50px;
+  font-size: 18px;
 }
 .menu_href a {
   //vertical-align: bottom;
 }
 .navbar {
-  margin-bottom: 0;
-  //margin-bottom: 0!important;
+  //margin-bottom: 0;
+  margin-bottom: 0!important;
 }
 .navbar-default {
-  background-color: #004444;
+  background-color: #fff573!important;
+}
+.main_pic_container {
+  height: 400px;
+  background-image: url("../img/0_8ebbc1.jpg");
+  background-position: left;
+  margin-bottom: 40px;
+}
+.next_game {
+  font-family: "PT Sans Regular";
+  color: white;
+  padding-right: 20%;
+  padding-top: 10%;
+
+  .main_title {
+    font-family: "PT Sans Bold";
+    font-size: 48px;
+    line-height: 60px;
+  }
+  .main_title_xs {
+    font-family: "PT Sans Bold";
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .main_text {
+    //font-size: 24px;
+    line-height: 20px;
+    margin-bottom: 5px;
+  }
+  .date_text {
+    font-family: "PT Sans Narrow";
+    font-size: 44px;
+    line-height: 46px;
+  }
+  .date_text_sm {
+    font-family: "PT Sans Narrow";
+    font-size: 42px;
+    line-height: 48px;
+  }
+  .date_text_xs {
+    font-family: "PT Sans Narrow";
+    font-size: 30px;
+    line-height: 30px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .next_game {
+    padding-right: 0;
+  }
+}
+p {
+  font-size: 18px;
+  line-height: 24px;
+}
+.cite_molot {
+  font-size: 30px;
+
+  &:before {
+    display: block;
+    content: "";
+    width: 30%;
+    height: 1px;
+    background-color: #333;
+    margin: 24px auto 15px auto;
+  }
+
+  &:after {
+    display: block;
+    content: "";
+    width: 30%;
+    height: 1px;
+    background-color: #333;
+    margin: 15px auto 24px auto;
+  }
+}
+.social_icons {
+  padding: 0;
+  margin: 40px 0 0 0;
+  list-style-type: none;
+}
+.social_icons_li {
+  display: inline-block;
+  margin-left: 20px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  a {
+    //text-indent: -9999px;
+  }
+
+}
+.social_icons_href {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  color: #d14647;
+  //border-radius: 5%;
+  //background-color: #9d2f24;
+  //
+  .mail {
+    //background-image: ;
+  }
+}
+
+.nav.navbar-nav.navbar-right a {
+  color: #333;
+  cursor: pointer;
+}
+.nav.navbar-nav.navbar-right a:hover {
+  font-weight: bold;
+}
+
+.nav.navbar-nav.navbar-right li:hover {
+  &:before {
+    position: absolute;
+    bottom: -1px;
+    display: block;
+    content: "";
+    height: 5px;
+    width: 100%;
+    background-color: #333;
+  }
 }

@@ -3,23 +3,83 @@ extends ../main.jade
 block title
     | РК «Молот»
 block content
-    nav.navbar.navbar-default.navbar-static-top
+    .page
+        nav.navbar.navbar-default.navbar-static-top
+            .container
+                .navbar-header
+                    span.navbar-brand
+                        span.logo_text_md.logo_text РК Молот
+                .collapse.navbar-collapse#navbar-collapse-1
+                    ul.nav.navbar-nav.navbar-right
+                        li
+                            a Вступить
+                        li
+                            a Статистика встреч
+                        li
+                            a Тренировки
+                        li
+                            a Контакты
+
+        .main_pic_container
+            .container
+                .next_game
+                    //p.main_text Следующая игра
+                    //p.main_title VIII московский турнир по пляжному регби, кубок WETT
+                    //p.main_text г. Москва, ЦПВС «Водный стадион»
+                    //p.main_text 25 декабря, 11:00
+                    .row
+                        .col-lg-12.col-md-12
+                            p.main_text Следующая игра
+                    .row
+                        .col-lg-12.col-md-12.hidden-xs
+                            p.main_title VIII московский турнир по пляжному регби, кубок WETT
+
+                        .col-lg-12.col-md-12.visible-xs-inline-block
+                            p.main_title_xs VIII московский турнир по пляжному регби, кубок WETT
+
+                    .row
+                        .col-lg-4.col-md-5.col-sm-6.hidden-sm.hidden-xs
+                            p.date_text 25 декабря, 11:00
+                        .col-lg-4.col-md-5.col-sm-6.visible-sm-inline-block.hidden-xs
+                            p.date_text_sm 25 декабря, 11:00
+                        .col-lg-4.col-md-5.col-sm-6.col-xs-12.visible-xs-inline-block.hidden-sm.hidden-lg.hidden-md
+                            p.date_text_xs 25 декабря, 11:00
+
+                        .col-lg-7.col-md-5.col-sm-5.col-xs-12
+                            p.main_text г. Москва
+
+                        .col-lg-7.col-md-5.col-sm-5.col-xs-12
+                            p.main_text ЦПВС «Водный стадион»
         .container
+            p До 2010 года регби не было не только в городе Чебоксары, но и во всей Чувашии. Летом того же года обычные чебоксарские парни, заинтересовавшись этим спортом,  решили купить регбийный мяч и попробовали его покидать — в тот день в парк пришли 7 человек, которые попытались поиграть во что-то похожее на регби.
             .row
-                .col-md-4.logo_text.clearfix
-                        .row
-                            .col-md-12
-                                span.logo_text_sx Регбийный клуб
-                        .row
-                            .col-md-12
-                                span.logo_text_md Молот
-                .col-md-2.menu
-                    a.menu_href Статистика встреч
-                .col-md-2.menu
-                    a.menu_href Тренировки
-                .col-md-2.menu
-                    a.menu_href Контакты
-                .col-md-2.menu
-                    a.menu_href Следующая игра
-    //.jumbotron
-    img(src="img/OwcC2pUJoWo.jpg").img-responsive
+                .col-md-3
+                .col-md-6.text-center
+                    span.cite_molot 12 декабря 2010 года — день рождения регби в Чувашии
+                .col-md-3
+            p Парням понравилось – они решили собираться каждое воскресенье. Но всем желающим заниматься регби в Чебоксарах получилось собраться вместе только 12 декабря 2010 года.
+            p В конце февраля 2011 года общим голосованием было выбрано название клуба - «Молот». В конце того же года была официально зарегистрирована «Федерация регби Чувашской республики».
+        .container.text-center.visible-lg-block
+            <iframe width="1140" height="641" src="https://www.youtube.com/embed/W_9JHwVv8KQ?showinfo=0" frameborder="0" allowfullscreen></iframe>
+        .container.text-center.visible-md-block
+            <iframe width="940" height="529" src="https://www.youtube.com/embed/W_9JHwVv8KQ?showinfo=0" frameborder="0" allowfullscreen></iframe>
+        .container.text-center.visible-sm-block
+            <iframe width="610" height="343" src="https://www.youtube.com/embed/W_9JHwVv8KQ?controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+        .container.text-center.visible-xs-block
+            <iframe width="290" height="163" src="https://www.youtube.com/embed/W_9JHwVv8KQ?controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+        .footer
+            .container.footer_container
+                p РК «Молот» открывает набор новых игроков, желающих принять участие в спортивной жизни клуба. Единственное ключевое требование, предъявляемое к каждому, кто готов защищать честь республики в данном виде спорта -
+                span.wish_molot «ЖЕЛАНИЕ ИГРАТЬ»
+                p а дальше мы посмотрим, на что вы способны...
+                img(src="img/molot_logo_lg.png" width=179 height=179 alt="Регбийный клуб «Молот»")
+                ul.social_icons
+                    li.social_icons_li
+                        a(href="").social_icons_href.vk
+                            i.fa.fa-vk.fa-2x
+                    li.social_icons_li
+                        a(href="").social_icons_href.mail
+                            i.fa.fa-envelope.fa-2x
+                    li.social_icons_li
+                        a(href="").social_icons_href.tw
+                            i.fa.fa-twitter.fa-2x
