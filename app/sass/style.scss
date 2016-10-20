@@ -112,16 +112,16 @@ body {
     //height: 50px;
     position: relative;
 
-  &:before {
-    //content: "";
-    //display: inline-block;
-    //position: absolute;
-    //width: 50px;
-    //height: 50px;
-    //background-image: url("../img/molot_logo_md.png");
-    //left: -60px;
-    //bottom: -2px;
-  }
+  //&:before {
+  //  //content: "";
+  //  //display: inline-block;
+  //  //position: absolute;
+  //  //width: 50px;
+  //  //height: 50px;
+  //  //background-image: url("../img/molot_logo_md.png");
+  //  //left: -60px;
+  //  //bottom: -2px;
+  //}
 
   .logo_text_sx {
     font-size: 14px;
@@ -288,4 +288,42 @@ p {
     width: 100%;
     background-color: #333;
   }
+}
+.offcanvas {
+  font-family: "PT Sans Regular";
+  font-size: 18px;
+  line-height: 24px;
+  padding-top: 12px;
+
+  a {
+    color: white;
+  }
+  a:visited {
+    color: #333;
+  }
+  a:hover {
+    cursor: pointer;
+    color: #fff573;
+  }
+  a:active {
+    color: red;
+  }
+  li {
+    list-style-type: none;
+  }
+}
+.navmenu-default, .navbar-default .navbar-offcanvas {
+  background: #333!important;
+}
+button {
+  margin-bottom: 0!important;
+  border: none!important;
+
+  &:hover {
+    font-size: 17px;
+  }
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+  background-color: #fff573!important;
 }

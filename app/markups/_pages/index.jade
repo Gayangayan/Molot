@@ -9,8 +9,19 @@ block content
                 .navbar-header
                     span.navbar-brand
                         span.logo_text_md.logo_text РК Молот
-                .collapse.navbar-collapse#navbar-collapse-1
-                    ul.nav.navbar-nav.navbar-right
+                    button(type="button" data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="body").navbar-toggle.visible-xs-inline-block
+                        span(aria-hidden="true").glyphicon.glyphicon-menu-hamburger
+                ul.nav.navbar-nav.navbar-right.hidden-xs
+                    li
+                        a Вступить
+                    li
+                        a Статистика встреч
+                    li
+                        a Тренировки
+                    li
+                        a Контакты
+                nav(role="navigation").navmenu.navmenu-default.navmenu-fixed-left.offcanvas#myNavmenu
+                    ul
                         li
                             a Вступить
                         li
