@@ -13,7 +13,9 @@ block content
                         span(aria-hidden="true").glyphicon.glyphicon-menu-hamburger
                 ul.nav.navbar-nav.navbar-right.hidden-xs
                     li
-                        a Вступить
+                        a История клуба
+                    li
+                        a Как вступить?
                     li
                         a Статистика встреч
                     li
@@ -62,6 +64,7 @@ block content
                         .col-lg-7.col-md-5.col-sm-5.col-xs-12
                             p.main_text ЦПВС «Водный стадион»
         .container
+            h2 История клуба
             p До 2010 года регби не было не только в городе Чебоксары, но и во всей Чувашии. Летом того же года обычные чебоксарские парни, заинтересовавшись этим спортом,  решили купить регбийный мяч и попробовали его покидать — в тот день в парк пришли 7 человек, которые попытались поиграть во что-то похожее на регби.
             .row
                 .col-md-3
@@ -70,27 +73,77 @@ block content
                 .col-md-3
             p Парням понравилось – они решили собираться каждое воскресенье. Но всем желающим заниматься регби в Чебоксарах получилось собраться вместе только 12 декабря 2010 года.
             p В конце февраля 2011 года общим голосованием было выбрано название клуба - «Молот». В конце того же года была официально зарегистрирована «Федерация регби Чувашской республики».
-        .container.text-center.visible-lg-block
-            <iframe width="1140" height="641" src="https://www.youtube.com/embed/W_9JHwVv8KQ?showinfo=0" frameborder="0" allowfullscreen></iframe>
-        .container.text-center.visible-md-block
-            <iframe width="940" height="529" src="https://www.youtube.com/embed/W_9JHwVv8KQ?showinfo=0" frameborder="0" allowfullscreen></iframe>
-        .container.text-center.visible-sm-block
-            <iframe width="610" height="343" src="https://www.youtube.com/embed/W_9JHwVv8KQ?controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-        .container.text-center.visible-xs-block
-            <iframe width="290" height="163" src="https://www.youtube.com/embed/W_9JHwVv8KQ?controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-        .footer
-            .container.footer_container
-                p РК «Молот» открывает набор новых игроков, желающих принять участие в спортивной жизни клуба. Единственное ключевое требование, предъявляемое к каждому, кто готов защищать честь республики в данном виде спорта -
-                span.wish_molot «ЖЕЛАНИЕ ИГРАТЬ»
-                p а дальше мы посмотрим, на что вы способны...
-                img(src="img/molot_logo_lg.png" width=179 height=179 alt="Регбийный клуб «Молот»")
-                ul.social_icons
-                    li.social_icons_li
-                        a(href="").social_icons_href.vk
-                            i.fa.fa-vk.fa-2x
-                    li.social_icons_li
-                        a(href="").social_icons_href.mail
-                            i.fa.fa-envelope.fa-2x
-                    li.social_icons_li
-                        a(href="").social_icons_href.tw
-                            i.fa.fa-twitter.fa-2x
+            <!-- 16:9 aspect ratio -->
+            <div class="embed-responsive embed-responsive-16by9">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/W_9JHwVv8KQ" frameborder="0" allowfullscreen></iframe>
+            </div>
+        //.footer
+        .container.footer_container
+
+            h2 Где мы тренируемся?
+            .row
+                .col-md-6
+                    .panel.panel-default
+                        h4.text-center.header
+                            .panel-body.text-center Летом — Московская набережная, пляж Афанасьева
+                            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=-4Rca2c4OWUXuQLlDhMjnBWxdC9PQWrg&amp;width=100%&amp;height=400&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
+                .col-md-6
+                    .panel.panel-default
+                        h4.text-center.header
+                            .panel-body.text-center Зимой — Футбольное поле ЧЭМК (напротив МТВ)
+                            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=wlNBuxkwvpeg2QLOlM3n30LI0xyDzqa7&amp;width=100%&amp;height=400&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
+
+            .row
+                .col-md-6
+                    h3 Как вступить?
+                    p РК «Молот» в поиске новых игроков, желающих принять участие в спортивной жизни клуба. Единственное и ключевое требование, предъявляемое к каждому, кто готов защищать честь республики в данном виде спорта — «ЖЕЛАНИЕ ИГРАТЬ»
+                        | . <br><br> <strong>Хотите принять участие и/или узнать больше?</strong> — приходи на ближайшую тренировку (<i>4 ноября, 18:00 — футбольное поле ЧЭМК</i>) или свяжись с Артемом или Пашей.
+                .col-md-6
+                    h3 Контакты
+                    h4 Артем Розанов
+                    .row
+                        .col-lg-2.col-md-3.col-sm-2.col-xs-4
+                            ul.contacts
+                                li.contacts_li
+                                    | Мобильный:
+                                    li.contacts_li
+                                    | Почта:
+                                    li.contacts_li
+                                    | Вконтакте:
+                        .col-lg-6.col-md-6.col-sm-6.col-xs-7
+                            ul.contacts
+                                li.contacts_li
+                                    a(href="tel:+79871201321") +7 (987) 120-13-21
+                                li.contacts_li
+                                    a(href="mailto:labcab@labcab.ru") АртемРозанов@жмайл.ком
+                                li.contacts_li
+                                    a(href="https://vk.com/rugbymolot" target="_blank") vk.com/rugbymolot
+                    h4 Павел Корнилов
+                    .row
+                        .col-lg-2.col-md-3.col-sm-2.col-xs-4
+                            ul.contacts
+                                li.contacts_li
+                                    | Мобильный:
+                                    li.contacts_li
+                                    | Почта:
+                                    li.contacts_li
+                                    | Вконтакте:
+                        .col-lg-6.col-md-6.col-sm-6.col-xs-7
+                            ul.contacts
+                                li.contacts_li
+                                    a(href="tel:+79871201321") +7 (987) 120-13-21
+                                li.contacts_li
+                                    a(href="mailto:labcab@labcab.ru") ПавелКорнилов@жмайл.ком
+                                li.contacts_li
+                                    a(href="https://vk.com/id19785579" target="_blank") vk.com/id19785579
+                    //img(src="img/molot_logo_lg.png" width=179 height=179 alt="Регбийный клуб «Молот»").logo_bottom.center-block
+            //ul.social_icons
+                li.social_icons_li
+                    a(href="").social_icons_href.vk
+                        i.fa.fa-vk.fa-2x
+                li.social_icons_li
+                    a(href="").social_icons_href.mail
+                        i.fa.fa-envelope.fa-2x
+                li.social_icons_li
+                    a(href="").social_icons_href.tw
+                        i.fa.fa-twitter.fa-2x

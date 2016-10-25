@@ -34,6 +34,18 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'PT Sans Narrow Bold';
+  src: url('../fonts/ptsans/ptn77f-webfont.eot');
+  src: url('../fonts/ptsans/ptn77f-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/ptsans/ptn77f-webfont.woff2') format('woff2'),
+  url('../fonts/ptsans/ptn77f-webfont.woff') format('woff'),
+  url('../fonts/ptsans/ptn77f-webfont.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+
+}
 //$black: #323232;
 
 
@@ -79,7 +91,8 @@ body {
   min-height:100%;
 }
 .page {
-  margin:0 auto 700px;
+  //margin:0 auto 700px;
+  margin: 0 auto;
   /*padding: 0 0 60px;*/
 }
 
@@ -92,10 +105,12 @@ body {
 }
 .footer_container {
   padding-top: 40px; // не относится к приколачиванию}
-  text-align: center;
+  //text-align: center;
 }
 .wish_molot {
-  font-size: 48px;
+  font-family: "PT Sans Bold";
+  //font-size: 48px;
+  //line-height: inherit;
 }
 //-----------------------------------------------------//
 
@@ -134,6 +149,9 @@ body {
     line-height: 30px;
     padding-left: 65px;
   }
+}
+.logo_bottom {
+  margin-top: 20px;
 }
 .col-md-2.menu {
   position: relative;
@@ -261,10 +279,13 @@ p {
   display: inline-block;
   width: 36px;
   height: 36px;
-  color: #d14647;
+  color: #333;
   //border-radius: 5%;
   //background-color: #9d2f24;
   //
+  &:hover {
+    color: #d14647;
+  }
   .mail {
     //background-image: ;
   }
@@ -275,7 +296,7 @@ p {
   cursor: pointer;
 }
 .nav.navbar-nav.navbar-right a:hover {
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .nav.navbar-nav.navbar-right li:hover {
@@ -326,4 +347,29 @@ button {
 
 .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
   background-color: #fff573!important;
+}
+h2, h3 {
+  font-family: "PT Sans Bold"!important;
+  color: #333!important;
+  margin-bottom: 20px!important;
+}
+h4 {
+  color: #333;
+  font-family: "PT Sans Bold"!important;
+}
+.contacts_li {
+  list-style-type: none;
+}
+.contacts {
+  padding-left: 0;
+}
+
+
+.panel-default > .panel-heading {
+  background-image: -webkit-linear-gradient(top, #333 0%, black 100%)!important;
+  background-image:      -o-linear-gradient(top, #333 0%, black 100%)!important;;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#333), to(black))!important;;
+  background-image:         linear-gradient(to bottom, #333 0%, black 100%)!important;;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333', endColorstr='black', GradientType=0)!important;;
+  background-repeat: repeat-x!important;;
 }
