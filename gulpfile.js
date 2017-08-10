@@ -1,65 +1,96 @@
-/* --------- plugins --------- */
+var gulp = require('gulp');
+var browserSync = require('browser-sync').create();
+var reload = browserSync.reload;
+var plumber = require('gulp-plumber');
+var sass = require('gulp-sass');
+var autoPrefixer = require('gulp-autoprefixer');
+//if node version is lower than v.0.1.2
+require('es6-promise').polyfill();
+var cssComb = require('gulp-csscomb');
+var cmq = require('gulp-merge-media-queries');
+var concat = require('gulp-concat');
+var jade = require('gulp-jade');
+var pug = require('gulp-pug');
+var imageMin = require('gulp-imagemin');
+var cache = require('gulp-cache');
+var notify = require('gulp-notify');
 
-var
-    gulp        = require('gulp'),
-    compass     = require('gulp-compass'),
-    jade        = require('gulp-jade'),
-    browserSync = require('browser-sync').create(),
-    plumber     = require('gulp-plumber');
-
-/* --------- paths --------- */
 
 var
     paths = {
-        jade : {
-            location    : 'app/markups/**/*.jade',
-            compiled    : 'app/markups/_pages/*.jade',
+        pug : {
+            location    : 'app/markups/**/*.pug',
+            compiled    : 'app/markups/_pages/*.pug',
             destination : '.'
-        },
-
-        scss : {
-            location    : 'app/sass/*.scss',
-            entryPoint  : 'css/main.css'
-        },
-
-        compass : {
-            configFile  : 'config.rb',
-            cssFolder   : 'css',
-            scssFolder  : 'app/sass',
-            imgFolder   : 'img'
         },
 
         browserSync : {
             baseDir : './',
-            watchPaths : ['*.html', 'css/*.css', 'js/*.js', 'app/markups/*.jade', 'app/markups/_pages/*.jade', 'app/markups/_common/*.jade']
+            watchPaths : ['*.html', 'css/*.css', 'js/*.js']
         }
-    }
+    };
 
-/* --------- jade --------- */
-
-gulp.task('jade', function() {
-    gulp.src(paths.jade.compiled)
+gulp.task('sass', function(){
+    gulp.src(['app/sass/**/*.scss'])
         .pipe(plumber())
-        .pipe(jade({
+        //.pipe(plumber({
+        //    handleError: function (err) {
+        //        console.log(err);
+        //        this.emit('end');
+        //    }
+        //}))
+        .pipe(sass())
+        .pipe(autoPrefixer())
+        .pipe(cssComb())
+        .pipe(cmq({log:true}))
+        .pipe(concat('main.css'))
+        .pipe(gulp.dest('css'))
+        .pipe(reload({stream:true}))
+        .pipe(notify('css task finished'))
+});
+gulp.task('js', function(){
+    gulp.src(['app/js/**/*.js'])
+        .pipe(plumber())
+        //.pipe(plumber({
+        //    handleError: function (err) {
+        //        console.log(err);
+        //        this.emit('end');
+        //    }
+        //}))
+        .pipe(gulp.dest('js'))
+        .pipe(reload({stream:true}))
+          .pipe(notify('js task finished'))
+});
+gulp.task('pug', function(){
+    gulp.src(paths.pug.compiled)
+        //.pipe(plumber())
+        .pipe(plumber({
+            handleError: function (err) {
+                console.log(err);
+                this.emit('end');
+            }
+        }))
+        .pipe(pug({
             pretty: '\t',
         }))
-        .pipe(gulp.dest(paths.jade.destination));
+        .pipe(gulp.dest(paths.pug.destination))
+        .pipe(reload({stream:true}))
+        .pipe(notify('html task finished'))
 });
-
-/* --------- scss-compass --------- */
-
-gulp.task('compass', function() {
-    gulp.src(paths.scss.location)
+gulp.task('image', function(){
+    gulp.src(['app/img/**/*'])
         .pipe(plumber())
-        .pipe(compass({
-            config_file: paths.compass.configFile,
-            css: paths.compass.cssFolder,
-            sass: paths.compass.scssFolder,
-            image: paths.compass.imgFolder
-        }));
+        //.pipe(plumber({
+        //    handleError: function (err) {
+        //        console.log(err);
+        //        this.emit('end');
+        //    }
+        //}))
+        .pipe(cache(imageMin()))
+        .pipe(gulp.dest('img'))
+        .pipe(reload({stream:true}))
+        .pipe(notify('image task finished'))
 });
-
-/* --------- browser sync --------- */
 
 gulp.task('sync', function() {
     browserSync.init({
@@ -68,16 +99,24 @@ gulp.task('sync', function() {
         }
     });
 });
-
-/* --------- watch --------- */
-
 gulp.task('watch', function(){
-    gulp.watch(paths.jade.location, ['jade']);
-    gulp.watch(paths.scss.location, ['compass']);
-    
+    gulp.watch('app/js/**/*.js',['js']);
+    gulp.watch('app/sass/**/*.scss',['sass']);
+    gulp.watch(paths.pug.location,['pug']);
+    gulp.watch('app/img/**/*.jpg',['image']);
+
     gulp.watch(paths.browserSync.watchPaths).on('change', browserSync.reload);
 });
 
-/* --------- default --------- */
-
-gulp.task('default', ['jade', 'compass', 'sync', 'watch']);
+//gulp.task('default', function(){
+//
+//
+//    gulp.watch('app/js/**/*.js',['js']);
+//    gulp.watch('app/sass/**/*.scss',['sass']);
+//    gulp.watch(paths.pug.location,['pug']);
+//    gulp.watch('app/img/**/*',['image']);
+//
+//
+//    gulp.watch(paths.browserSync.watchPaths).on('change', browserSync.reload);
+//});
+gulp.task('default', ['pug', 'sass', 'js', 'image', 'sync', 'watch']);

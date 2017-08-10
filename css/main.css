@@ -1,0 +1,329 @@
+@font-face {
+	font-family: 'molot';
+	font-weight: normal;
+	font-style: normal;
+	src: url('../fonts/molot/8232-webfont.woff2') format('woff2'), url('../fonts/molot/8232-webfont.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'PT Sans Regular';
+	font-weight: normal;
+	font-style: normal;
+	src: url('../fonts/ptsans/pts55f-webfont.eot');
+	src: url('../fonts/ptsans/pts55f-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/ptsans/pts55f-webfont.woff2') format('woff2'), url('../fonts/ptsans/pts55f-webfont.woff') format('woff'), url('../fonts/ptsans/pts55f-webfont.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'PT Sans Bold';
+	font-weight: bold;
+	font-style: normal;
+	src: url('../fonts/ptsans/pts75f-webfont.eot');
+	src: url('../fonts/ptsans/pts75f-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/ptsans/pts75f-webfont.woff2') format('woff2'), url('../fonts/ptsans/pts75f-webfont.woff') format('woff'), url('../fonts/ptsans/pts75f-webfont.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'PT Sans Narrow';
+	font-weight: normal;
+	font-style: normal;
+	src: url('../fonts/ptsans/ptn57f-webfont.eot');
+	src: url('../fonts/ptsans/ptn57f-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/ptsans/ptn57f-webfont.woff2') format('woff2'), url('../fonts/ptsans/ptn57f-webfont.woff') format('woff'), url('../fonts/ptsans/ptn57f-webfont.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'PT Sans Narrow Bold';
+	font-weight: bold;
+	font-style: normal;
+	src: url('../fonts/ptsans/ptn77f-webfont.eot');
+	src: url('../fonts/ptsans/ptn77f-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/ptsans/ptn77f-webfont.woff2') format('woff2'), url('../fonts/ptsans/ptn77f-webfont.woff') format('woff'), url('../fonts/ptsans/ptn77f-webfont.ttf') format('truetype');
+}
+
+html,
+body {
+	position: relative;
+	overflow-x: hidden;
+	height: 100%;
+}
+
+body {
+	overflow: hidden;
+	height: auto;
+	min-height: 100%;
+}
+
+.page {
+	margin: 0 auto; /*padding: 0 0 60px;*/
+}
+
+.footer {
+	margin-bottom: 40px;
+}
+
+.footer_container {
+	padding-top: 40px;
+}
+
+.wish_molot {
+	font-family: 'PT Sans Bold';
+}
+
+.page,
+.footer {
+	font-family: 'PT Sans Regular';
+	background-color: #fff573;
+}
+
+.logo_text {
+	font-family: 'molot';
+	font-size: 30px;
+	position: relative;
+	color: #333;
+}
+
+.logo_text .logo_text_sx {
+	font-size: 14px;
+	line-height: 18px;
+	padding-left: 65px;
+}
+
+.logo_text .logo_text_md {
+	font-size: 38px;
+	line-height: 30px;
+	padding-left: 65px;
+}
+
+.logo_bottom {
+	margin-top: 20px;
+}
+
+.col-md-2.menu {
+	position: relative;
+}
+
+.navbar-static-top a {
+	color: #333;
+}
+
+.menu {
+	font-size: 18px;
+	height: 50px;
+	text-align: right;
+}
+
+.navbar {
+	margin-bottom: 0 !important;
+}
+
+.navbar-default {
+	background-color: #fff573 !important;
+}
+
+.main_pic_container {
+	height: 400px;
+	margin-bottom: 40px;
+	background-image: url('../img/0_8ebbc1.jpg');
+	background-position: left;
+}
+
+.next_game {
+	font-family: 'PT Sans Regular';
+	padding-top: 10%;
+	padding-right: 20%;
+	color: white;
+}
+
+.next_game .main_title {
+	font-family: 'PT Sans Bold';
+	font-size: 48px;
+	line-height: 60px;
+}
+
+.next_game .main_title_xs {
+	font-family: 'PT Sans Bold';
+	font-size: 36px;
+	line-height: 40px;
+}
+
+.next_game .main_text {
+	line-height: 20px;
+	margin-bottom: 5px;
+}
+
+.next_game .date_text {
+	font-family: 'PT Sans Narrow';
+	font-size: 44px;
+	line-height: 46px;
+}
+
+.next_game .date_text_sm {
+	font-family: 'PT Sans Narrow';
+	font-size: 42px;
+	line-height: 48px;
+}
+
+.next_game .date_text_xs {
+	font-family: 'PT Sans Narrow';
+	font-size: 30px;
+	line-height: 30px;
+}
+
+p {
+	font-size: 18px;
+	line-height: 24px;
+}
+
+.cite_molot {
+	font-size: 30px;
+}
+
+.cite_molot:before {
+	display: block;
+	width: 30%;
+	height: 1px;
+	margin: 24px auto 15px auto;
+	content: '';
+	background-color: #333;
+}
+
+.cite_molot:after {
+	display: block;
+	width: 30%;
+	height: 1px;
+	margin: 15px auto 24px auto;
+	content: '';
+	background-color: #333;
+}
+
+.social_icons {
+	margin: 40px 0 0 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.social_icons_li {
+	display: inline-block;
+	margin-left: 20px;
+}
+
+.social_icons_li:first-child {
+	margin-left: 0;
+}
+
+.social_icons_href {
+	display: inline-block;
+	width: 36px;
+	height: 36px;
+	color: #333;
+}
+
+.social_icons_href:hover {
+	color: #d14647;
+}
+
+.nav.navbar-nav.navbar-right a {
+	cursor: pointer;
+	color: #333;
+}
+
+.nav.navbar-nav.navbar-right a:hover {
+	font-weight: 600;
+}
+
+.nav.navbar-nav.navbar-right li:hover:before {
+	position: absolute;
+	bottom: -1px;
+	display: block;
+	width: 100%;
+	height: 5px;
+	content: '';
+	background-color: #333;
+}
+
+.offcanvas {
+	font-family: 'PT Sans Regular';
+	font-size: 18px;
+	line-height: 24px;
+	padding-top: 12px;
+}
+
+.offcanvas a {
+	color: white;
+}
+
+.offcanvas a:visited {
+	color: #333;
+}
+
+.offcanvas a:hover {
+	cursor: pointer;
+	color: #fff573;
+}
+
+.offcanvas a:active {
+	color: red;
+}
+
+.offcanvas li {
+	list-style-type: none;
+}
+
+.navmenu-default,
+.navbar-default .navbar-offcanvas {
+	background: #333 !important;
+}
+
+button {
+	margin-bottom: 0 !important;
+	border: none !important;
+}
+
+button:hover {
+	font-size: 17px;
+}
+
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:hover {
+	background-color: #fff573 !important;
+}
+
+h2,
+h3 {
+	font-family: 'PT Sans Bold' !important;
+	margin-bottom: 20px !important;
+	color: #333 !important;
+}
+
+h4 {
+	font-family: 'PT Sans Bold' !important;
+	color: #333;
+}
+
+.contacts_li {
+	list-style-type: none;
+}
+
+.contacts {
+	padding-left: 0;
+}
+
+.panel-default > .panel-heading {
+	background-image: -webkit-linear-gradient(top, #333 0%, black 100%) !important;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#333), to(black)) !important;
+	background-image: linear-gradient(to bottom, #333 0%, black 100%) !important;
+	background-repeat: repeat-x !important;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333', endColorstr='black', GradientType=0) !important;
+}
+
+.navmenu-default,
+.navbar-default .navbar-offcanvas {
+	background-color: #333 !important;
+}
+
+@media screen and (max-width: 767px) {
+
+.next_game {
+	padding-right: 0;
+}
+
+}
+
+

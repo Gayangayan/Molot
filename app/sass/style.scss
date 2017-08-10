@@ -1,11 +1,10 @@
-@import url(../css/font-awesome.css);
+//@import url(../css/bootstrap/font-awesome.css);
 @font-face {
   font-family: 'molot';
   src: url('../fonts/molot/8232-webfont.woff2') format('woff2'),
   url('../fonts/molot/8232-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
-
 }
 @font-face {
   font-family: 'PT Sans Regular';
@@ -365,7 +364,6 @@ h4 {
   padding-left: 0;
 }
 
-
 .panel-default > .panel-heading {
   background-image: -webkit-linear-gradient(top, #333 0%, black 100%)!important;
   background-image:      -o-linear-gradient(top, #333 0%, black 100%)!important;;
@@ -373,4 +371,8 @@ h4 {
   background-image:         linear-gradient(to bottom, #333 0%, black 100%)!important;;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333', endColorstr='black', GradientType=0)!important;;
   background-repeat: repeat-x!important;;
+}
+
+.navmenu-default, .navbar-default .navbar-offcanvas {
+  background-color: #333!important;
 }
